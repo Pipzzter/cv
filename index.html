@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Filip Jordanoski">
+<title>Filip Jordanoski - CV</title>
+<!--
+  Master copy of Filip's CV. The PDF is printed from this file (command in knowledge/README.md, "CV");
+  Filip_Jordanoski_CV.md mirrors it for the dashboard and Filip_Jordanoski_CV.txt for plain-text forms.
+  Change all three together, then reprint the PDF.
+-->
+<style>
+  @page { size: A4; margin: 12mm 14mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.42;
+    color: #222;
+    max-width: 210mm;
+    margin: 0 auto;
+  }
+  @media screen { body { padding: 14mm; } }
+  a { color: #1a4fb5; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  header { text-align: center; padding-bottom: 10px; border-bottom: 2px solid #111; margin-bottom: 12px; }
+  h1 { font-size: 26pt; letter-spacing: 2px; font-weight: 700; color: #111; line-height: 1.15; }
+  .headline { font-size: 14pt; color: #333; margin-top: 2px; }
+  .focus { font-size: 10.5pt; color: #666; margin-top: 2px; }
+  .contact { margin-top: 7px; font-size: 10.5pt; line-height: 1.55; }
+  .contact a, .contact span { white-space: nowrap; }
+  .sep { color: #b5b5b5; margin: 0 7px; }
+
+  h2 {
+    font-size: 11.5pt; letter-spacing: 1.4px; text-transform: uppercase; color: #111;
+    border-bottom: 1px solid #cfcfcf; padding-bottom: 3px; margin: 16px 0 8px;
+    break-after: avoid;
+  }
+  .summary { text-align: justify; color: #333; }
+
+  .skills { display: grid; grid-template-columns: 112px 1fr; gap: 3px 12px; }
+  .skills dt { font-weight: 600; color: #111; }
+  .skills dd { color: #333; }
+
+  .entry { margin-bottom: 12px; }
+  .head { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; break-after: avoid; }
+  .org { font-weight: 700; font-size: 12pt; color: #111; }
+  .role { font-weight: 600; color: #111; break-after: avoid; }
+  .muted { color: #666; }
+  .nb { white-space: nowrap; }
+  .when { color: #555; font-size: 10pt; white-space: nowrap; }
+  .subrole { margin-top: 7px; }
+
+  ul { list-style: none; margin-top: 3px; }
+  li { position: relative; padding-left: 14px; margin-bottom: 4px; break-inside: avoid; }
+  li::before { content: "•"; position: absolute; left: 2px; color: #666; }
+  li b { color: #111; }
+  .stack { color: #666; font-size: 10pt; margin-top: 2px; }
+
+  .project { margin-bottom: 11px; break-inside: avoid; }
+  .project .name { font-weight: 700; color: #0b3a8c; font-size: 11.5pt; }
+  .project .repo { font-size: 10pt; white-space: nowrap; }
+  .project p { color: #333; margin-top: 1px; }
+
+  .bottom { display: grid; grid-template-columns: 1.5fr 1fr; gap: 18px; break-inside: avoid; }
+  .bottom p { color: #333; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>FILIP JORDANOSKI</h1>
+  <div class="headline">AI Full-Stack Engineer</div>
+  <div class="focus">AI agents · Multi-agent orchestration · RAG &amp; search · FastAPI + Vue</div>
+  <div class="contact">
+    <a href="mailto:pipojordanoski@gmail.com">pipojordanoski@gmail.com</a><span class="sep">|</span>
+    <a href="tel:+38970207736">+389 70 207 736</a><span class="sep">|</span>
+    <span>Skopje, North Macedonia (remote)</span><br>
+    <a href="https://www.linkedin.com/in/pipojordanoski">linkedin.com/in/pipojordanoski</a><span class="sep">|</span>
+    <a href="https://github.com/Pipzzter">github.com/Pipzzter</a><span class="sep">|</span>
+    <a href="https://www.upwork.com/freelancers/pipo">upwork.com/freelancers/pipo</a>
+  </div>
+</header>
+
+<h2>Professional Summary</h2>
+<p class="summary">
+  AI full-stack engineer who builds production LLM systems: multi-agent orchestration with LangGraph, AI agents with
+  tool calling, RAG and hybrid search, and Claude skill pipelines, on FastAPI, PostgreSQL and Vue. Freelancing on Upwork
+  since February 2026 with 5-star client reviews, after AI engineering roles at YipYap and Cognirum. Builds for
+  reliability (retries and model fallback, checkpointed runs, schema-validated output, human review where errors
+  compound) and owns delivery from architecture to deployment.
+</p>
+
+<h2>Technical Skills</h2>
+<dl class="skills">
+  <dt>Languages</dt><dd>Python, TypeScript, JavaScript, SQL, PHP</dd>
+  <dt>AI &amp; LLMs</dt><dd>OpenAI, Anthropic Claude, Gemini, Grok, DeepSeek · LangGraph, LangChain · RAG, hybrid search (BM25 + vectors), pgvector, sentence-transformers · tool calling, structured output (Pydantic) · Claude Skills · prompt engineering</dd>
+  <dt>Backend</dt><dd>FastAPI, async SQLAlchemy, Alembic, Pydantic, Socket.IO, Node.js, Deno, Django, <span class="nb">REST APIs</span></dd>
+  <dt>Frontend</dt><dd>Vue 3, TypeScript, Vite, Pinia, Tailwind CSS, React, Nuxt.js</dd>
+  <dt>Data</dt><dd>PostgreSQL (full-text search, pgvector), SQLite, Prisma</dd>
+  <dt>DevOps</dt><dd>Docker, GitHub Actions CI/CD, Caddy, Nginx, DigitalOcean, Render, Cloudflare Tunnels, pytest, Ruff, <span class="nb">pre-commit</span></dd>
+  <dt>AI development</dt><dd>Claude Code (main coding tool, every project), Codex (animations, logo and brand design)</dd>
+  <dt>Platforms</dt><dd>Base44, GitHub Copilot, Shopify GraphQL, Make.com, n8n, Stripe, Framer, Selenium, Scrapy</dd>
+</dl>
+
+<h2>Work Experience</h2>
+
+<div class="entry">
+  <div class="head">
+    <div><span class="org">Freelance AI Full-Stack Engineer</span> <span class="muted">· <a href="https://www.upwork.com/freelancers/pipo">Upwork</a> · Remote</span></div>
+    <div class="when">February 2026 – Present</div>
+  </div>
+  <ul>
+    <li><b>SornAI, SEO &amp; AI-visibility strategy agent</b> <span class="muted">(Sorn, SEO agency · Jun – Sep 2026)</span>: replaced the agency's brittle strategy prompt with a Claude skill chain (an orchestrator and 12 stage skills) that turns Search Console, Ahrefs, GA4 and crawl exports into a client-ready strategy (.docx) and an E-E-A-T audit, with two human-review checkpoints, deterministic figures and a 29-rule guardrail contract against invented data.</li>
+    <li><b>OTTO, AI buyer's agent</b> <span class="muted">(Think Auto, Australian car-buying platform · Jun 2026 – Present)</span>: AI agent on Base44 that routes each shopper's request to the right tool (vehicle search, valuation, market pricing, lead capture) with fallbacks, typo tolerance and banded prices; ongoing work on the platform's flows, Deno backend functions and admin CRM.</li>
+    <li><b>Hybrid search &amp; research overviews</b> <span class="muted">(Faculti, academic video platform · Feb 2026 · <a href="https://www.loom.com/share/51768c1b805249269696f13fde705265">walkthrough</a>)</span>: hybrid search in the client's PostgreSQL (full-text + pgvector with HNSW) with a category-first stage, intent detection and weighted ranking across 6,000+ expert videos, 500k+ clips and papers, plus an LLM overview grounded in the results.</li>
+    <li><b>Multi-agent e-commerce orchestrator</b> <span class="muted">(EverCart AI · Mar 2026)</span>: orchestrator foundation with Postgres checkpointing and a Grok → Claude fallback, driven by a JSON workflow; since published as <a class="nb" href="https://github.com/Pipzzter/storeforge">StoreForge AI</a>.</li>
+    <li><b>Landing-page automation</b> <span class="muted">(Growevity, e-commerce · Feb – Mar 2026)</span>: copy-injection agent that fills HTML landing-page templates from raw copy, with dynamic sections and generated images; rebuilt the client's five templates.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="head">
+    <div><span class="org">YipYap</span> <span class="muted">· Remote · Embeddable AI agent SaaS platform</span></div>
+    <div class="when">October 2025 – February 2026</div>
+  </div>
+  <div class="role">AI Full-Stack Engineer</div>
+  <ul>
+    <li>Built the platform where businesses turn their own files and web pages into AI agents and embed them on any site with one &lt;script&gt; tag (Intercom-style).</li>
+    <li>Agent builder and ingestion: system prompts, uploads and URLs into per-agent knowledge bases; document processing for PDF, DOCX, CSV, TXT, MD and JPG; web-page scraping and indexing.</li>
+    <li>Provider-agnostic Model Factory with tool calling, hybrid RAG (BM25 + vectors), token-by-token Socket.IO streaming, and a multi-tenant FastAPI + PostgreSQL backend with per-tenant token tracking.</li>
+  </ul>
+  <div class="stack">Stack: FastAPI · Vue 3 · PostgreSQL · Docker · Socket.IO · LangChain</div>
+</div>
+
+<div class="entry">
+  <div class="head">
+    <div><span class="org">Cognirum</span> <span class="muted">· Skopje, North Macedonia · AI support copilot</span></div>
+  </div>
+  <div class="head subrole">
+    <div class="role">AI Full-Stack Engineer</div>
+    <div class="when">February 2025 – September 2025</div>
+  </div>
+  <ul>
+    <li>Built the internal AI Support Copilot used by the customer support team, end to end on FastAPI, PostgreSQL, LangChain and Vue.js.</li>
+    <li>Agentic tool calling that runs SQL against operational databases (order status, shipment tracking, user lookups); hybrid RAG (BM25 + dense vectors) over policies and SOPs; a dashboard showing the agent's reasoning steps and tool calls.</li>
+  </ul>
+  <div class="head subrole">
+    <div class="role">AI R&amp;D Intern</div>
+    <div class="when">August 2024 – January 2025</div>
+  </div>
+  <ul>
+    <li>RAG benchmarking system (chunking strategies, retrieval algorithms, generation quality) and the company's first hybrid search prototype (BM25 + dense embeddings), with tuned chunk size, overlap, top-k and similarity thresholds.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="head">
+    <div><span class="org">Involve</span> <span class="muted">· Skopje, North Macedonia</span></div>
+  </div>
+  <div class="head subrole">
+    <div class="role">Junior Web Developer</div>
+    <div class="when">March 2024 – May 2024</div>
+  </div>
+  <ul>
+    <li>Admin panel improvements across frontend and backend in JavaScript and PHP.</li>
+  </ul>
+  <div class="head subrole">
+    <div class="role">Web Scraping Engineer</div>
+    <div class="when">July 2023 – September 2023</div>
+  </div>
+  <ul>
+    <li>Scraping pipelines with Selenium and Scrapy, including anti-bot handling, delivering clean, structured data.</li>
+  </ul>
+</div>
+
+<h2>Projects</h2>
+
+<div class="project">
+  <div class="head">
+    <a class="name" href="https://github.com/Pipzzter/storeforge">StoreForge AI</a>
+    <a class="repo" href="https://github.com/Pipzzter/storeforge">github.com/Pipzzter/storeforge</a>
+  </div>
+  <p>Multi-agent system: a founder's five-question intake becomes a 7-day launch plan, a sourced product line with margins and the Shopify GraphQL code for the store; Claude / Grok routing with retries and fallback, Postgres checkpoints so runs resume, 52 tests that run without API keys.</p>
+  <div class="stack">LangGraph · FastAPI · PostgreSQL · Claude · Grok</div>
+</div>
+
+<div class="project">
+  <div class="head">
+    <a class="name" href="https://github.com/Pipzzter/papermind">PaperMind</a>
+    <a class="repo" href="https://github.com/Pipzzter/papermind">github.com/Pipzzter/papermind</a>
+  </div>
+  <p>RAG study platform: PDFs and notes become shared Knowledge Spaces, answers cite the exact source page, retrieval is hybrid and permission-aware, and the same material generates study guides, graded quizzes and spaced-repetition flashcards.</p>
+  <div class="stack">FastAPI · Vue 3 · PostgreSQL + pgvector · Gemini · OpenAI</div>
+</div>
+
+<div class="project">
+  <div class="head">
+    <a class="name" href="https://github.com/Pipzzter/advertly">Advertly</a>
+    <a class="repo" href="https://github.com/Pipzzter/advertly">github.com/Pipzzter/advertly</a>
+  </div>
+  <p>Raw advertorial copy in, a publishable landing page out: Gemini extracts typed sections, deterministic code fills the HTML template, and Gemini image generation fills every image slot.</p>
+  <div class="stack">FastAPI · Gemini 2.5 Flash + Image · Vue 3 · Docker</div>
+</div>
+
+<div class="project">
+  <div class="head">
+    <a class="name" href="https://github.com/Pipzzter/sostojka">Sostojka</a>
+    <a class="repo" href="https://github.com/Pipzzter/sostojka">github.com/Pipzzter/sostojka</a>
+  </div>
+  <p>Agentic entity linking of Macedonian recipe ingredients to USDA FoodData Central: a five-stage, tool-using pipeline that shows every reasoning step and confidence (implements the method from Darko Gjorgjievski's thesis).</p>
+  <div class="stack">Python · FastAPI · OpenAI tool calling</div>
+</div>
+
+<div class="project">
+  <div class="head">
+    <a class="name" href="https://github.com/Pipzzter/nedelko">Nedelko</a>
+    <a class="repo" href="https://github.com/Pipzzter/nedelko">github.com/Pipzzter/nedelko</a>
+  </div>
+  <p>Team of three, 3-day hackathon: an AI weekly planner for kindergarten teachers with bilingual plans under strict schema validation and live air-quality and weather data that move lessons indoors; 249 tests, SonarQube quality gate.</p>
+  <div class="stack">Node.js · Preact · SQLite · OpenAI</div>
+</div>
+
+<div class="project">
+  <div class="head">
+    <a class="name" href="https://github.com/Pipzzter/fastapi-vue-starter">FastAPI + Vue Starter</a>
+    <a class="repo" href="https://github.com/Pipzzter/fastapi-vue-starter">github.com/Pipzzter/fastapi-vue-starter</a>
+  </div>
+  <p>Production starter: JWT auth with Argon2, async SQLAlchemy with Alembic migrations, rate limiting, health probes, multi-stage Docker builds, Ruff, pytest and CI from the first commit.</p>
+  <div class="stack">FastAPI · Vue 3 · Docker · GitHub Actions</div>
+</div>
+
+<div class="project">
+  <div class="head">
+    <a class="name" href="https://brzafaktura.mk">Brza Faktura</a>
+    <a class="repo" href="https://brzafaktura.mk">brzafaktura.mk</a>
+  </div>
+  <p>Live e-invoicing SaaS for Macedonian businesses, built solo (private repo): multi-tenant organizations with team roles, email and Google sign-in, invoices, and company verification plus official codelists through the tax authority's (UJP) API, with e-invoice submission in progress; English, Macedonian and Albanian UI.</p>
+  <div class="stack">FastAPI · Vue 3 · PostgreSQL · Docker · Caddy</div>
+</div>
+
+<div class="bottom">
+  <div>
+    <h2>Education</h2>
+    <p><b>Faculty of Computer Science and Engineering (FINKI)</b>, Ss. Cyril and Methodius University in Skopje</p>
+    <p class="muted">B.Sc. in Computer Science, 2023 – 2027 (expected)</p>
+    <h2>Certifications</h2>
+    <p><a href="https://verify.skilljar.com/c/8cygx6tojpk7">Claude Code in Action</a> <span class="muted">· Anthropic</span></p>
+    <p><a href="https://www.linkedin.com/learning/certificates/145c0e6c3ef05f256278ca208807534b6517db37bdbc8540961b914b51629c04">Career Essentials in Generative AI</a> <span class="muted">· Microsoft &amp; LinkedIn</span></p>
+  </div>
+  <div>
+    <h2>Languages</h2>
+    <p><b>English:</b> Fluent</p>
+    <p><b>Macedonian:</b> Native</p>
+  </div>
+</div>
+
+</body>
+</html>
